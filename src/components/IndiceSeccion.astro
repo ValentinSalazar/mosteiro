@@ -1,0 +1,10 @@
+---
+interface Props {
+    seccion: string;
+}
+const { seccion } = Astro.props;
+---
+
+<span class="px-3 py-1 bg-white lg:text-lg self-start font-light hidden">
+    {seccion}
+</span>

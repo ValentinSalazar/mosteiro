@@ -1,0 +1,17 @@
+---
+import Logo from "./Logo.astro";
+import MenuIcon from "./MenuIcon.astro";
+---
+
+<nav class="flex w-[100%] justify-between items-center fixed z-50 px-5 py-5 lg:px-10 lg:py-10">
+    <Logo ancho={80} alto={40}/>
+    <MenuIcon/>
+</nav>
+
+<script>
+    const menu_icon = document.querySelector('#menu_icon');
+    menu_icon.addEventListener('click', () => {
+        menu_icon.classList.remove('flex');
+        menu_icon.classList.add('hidden');
+    })
+</script>

@@ -1,0 +1,12 @@
+---
+interface Props {
+	href: string;
+	image: string;
+}
+
+const { href, image } = Astro.props;
+---
+
+<article class="w-[200px] h-[300px] bg-secondColor flex justify-center items-end">
+	<a href={href} class="mb-10 bg-white px-5 py-1 border-2 border-transparent hover:bg-transparent hover:border-white hover:text-white duration-150">Ver más</a>
+</article>
