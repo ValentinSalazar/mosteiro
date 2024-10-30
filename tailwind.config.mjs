@@ -20,6 +20,7 @@ export default {
 			},
 			backgroundImage: {
 				'mainImage': "url('/home.webp')",
+				'cocinaImage': "url('/cocinaBkg.webp')",
 				'proceso-1': 'url("/proceso-1.png")',
 				'proceso-2': 'url("/proceso-2.png")',
 			}
