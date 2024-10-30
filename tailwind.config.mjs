@@ -9,20 +9,26 @@ export default {
 			'lg': '1024px', // Tablet Horizontal y Laptops
 			'xl': '1280px', // Laptops y escritorios chicos
 			'2xl': '1536px', // Escritorios grandes
-		  },
+		},
 		extend: {
 			fontFamily: {
 				sans: ['Poppins', 'sans-serif'],
-			  },
+			},
 			colors: {
-				'firstColor': '#333333',
+				'firstColor': '#151515',
 				'secondColor': '#EADFCA',
+			},
+			boxShadow: {
+				'leftShadow': '-6px 0px 8px rgba(0, 0, 0, 0.3)',
 			},
 			backgroundImage: {
 				'mainImage': "url('/home.webp')",
 				'cocinaImage': "url('/cocinaBkg.webp')",
 				'proceso-1': 'url("/proceso-1.png")',
 				'proceso-2': 'url("/proceso-2.png")',
+				'garantia': 'url("/imageGarantia.webp")',
+				'nosotrosLeft': 'url("/nosotros-left.webp")',
+				'nosotrosRight': 'url("/nosotros-right.webp")',
 			}
 		},
 	},

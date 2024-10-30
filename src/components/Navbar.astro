@@ -3,7 +3,7 @@ import Logo from "./Logo.astro";
 import MenuIcon from "./MenuIcon.astro";
 ---
 
-<nav class="flex w-[100%] justify-between items-center fixed z-50 px-5 py-5 lg:px-10 lg:py-10">
+<nav class="flex w-[100%] justify-between items-center absolute z-50 px-5 py-5 lg:px-10 lg:py-10">
     <Logo ancho={80} alto={40}/>
     <MenuIcon/>
 </nav>
@@ -14,4 +14,14 @@ import MenuIcon from "./MenuIcon.astro";
         menu_icon.classList.remove('flex');
         menu_icon.classList.add('hidden');
     })
+
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 500){
+            nav.classList.add('bg-secondColor')
+        } else {
+            nav.classList.remove('bg-secondColor');
+        }
+    });
+
 </script>
