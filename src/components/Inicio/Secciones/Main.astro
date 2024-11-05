@@ -1,7 +1,32 @@
-<main class="bg-firstColor h-screen w-screen bg-mainImage bg-cover px-5 py-5 lg:px-10 lg:py-10 flex">
-    <footer class="self-end flex justify-between items-center w-[100%]">
-        <h3 class="text-white font-extralight mx-auto text-xs xs:text-sm md:text-lg lg:text-xl text-center text-balance">
-            Madera, creatividad y pasión: Transformamos tu espacio.
-        </h3>
+---
+import Flecha from "../../Flecha.astro";
+---
+
+<main
+    class="bg-firstColor relative h-screen w-screen bg-mainImage bg-cover px-5 py-5 lg:px-10 lg:py-10 flex flex-col justify-center text-center"
+>
+    <header
+        class="text-white relative flex flex-col mt-10 justify-center items-center"
+    >
+        <h3 class="font-medium text-[1.2rem]">Hugo Mosteiro Amoblamientos</h3>
+        <h1
+            class="text-7xl font-bold text-white bg-red-600 relative inline-block w-fit pr-1"
+        >
+            MADERA
+        </h1>
+        <h1 class="text-2xl inline-block font-extralight pt-2">
+            Creatividad y pasión
+        </h1>
+        <h3 class="font-medium">¡Transformamos tu espacio!</h3>
+    </header>
+
+    <footer class="flex flex-col items-center pt-10 gap-5">
+        <a
+            href="#"
+            class="text-black border-2 border-transparent bg-white w-fit px-4 py-2 font-bold flex items-center gap-3 hover:bg-transparent hover:text-white hover:border-2 hover:border-white active:opacity-50 group duration-100"
+        >
+            Contactanos
+            <Flecha clases="fill-current group-hover:fill-white" />
+        </a>
     </footer>
 </main>
