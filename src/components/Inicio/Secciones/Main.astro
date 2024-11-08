@@ -8,25 +8,34 @@ import Flecha from "../../Flecha.astro";
     <header
         class="text-white relative flex flex-col mt-10 justify-center items-center"
     >
-        <h3 class="font-medium text-[1.2rem]">Hugo Mosteiro Amoblamientos</h3>
-        <h1
-            class="text-7xl font-bold text-white bg-red-600 relative inline-block w-fit pr-1"
+        <div class="md:flex md:justify-center md:w-screen">
+            <h1 class="text-white text-8xl font-bold leading-none w-fit">
+                HUGO
+            </h1>
+            <h3
+                class="font-medium text-[47.5px] leading-none w-fit tracking-[6px] relative bottom-1 left-[3px] md:font-bold md:text-8xl md:tracking-[0px]"
+            >
+                MOSTEIRO
+            </h3>
+        </div>
+        <h3
+            class="tracking-[-2px] text-[35px] leading-[40px] bg-[#B91111] font-semibold px-1 w-fit md:hidden"
         >
-            MADERA
-        </h1>
-        <h1 class="text-2xl inline-block font-extralight pt-2">
-            Creatividad y pasión
-        </h1>
-        <h3 class="font-medium">¡Transformamos tu espacio!</h3>
+            AMOBLAMIENTOS
+        </h3>
     </header>
 
-    <footer class="flex flex-col items-center pt-10 gap-5">
+    <footer class="flex flex-col items-center pt-5 gap-5 relative top-20">
         <a
             href="#"
-            class="text-black border-2 border-transparent bg-white w-fit px-4 py-2 font-bold flex items-center gap-3 hover:bg-transparent hover:text-white hover:border-2 hover:border-white active:opacity-50 group duration-100"
+            class="md:hidden text-black border-2 border-transparent bg-white w-fit px-4 py-2 font-bold flex items-center gap-3 hover:bg-transparent hover:text-white hover:border-2 hover:border-white active:opacity-50 group duration-100"
         >
             Contactanos
             <Flecha clases="fill-current group-hover:fill-white" />
         </a>
+        <h6 class="text-white font-extralight relative top-10 md:top-40">
+            Madera, creativad y pasión<br />
+            <b>¡Transformamos tu espacio!</b>
+        </h6>
     </footer>
 </main>
