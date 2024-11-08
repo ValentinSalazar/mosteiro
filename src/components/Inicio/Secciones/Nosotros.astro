@@ -1,3 +1,8 @@
+---
+import WhatsApp from "../../WhatsApp.astro";
+import Instagram from "../../Instagram.astro"
+---
+
 <section
     class="w-screen bg-fixed flex flex-col md:flex-row [&>div]:w-full [&>div]:md:w-[40%] [&>div]:2xl:w-[600px] [&>div]:bg-cover [&>div]:bg-no-repeat md:p-20 bg-firstColor justify-center"
 >
@@ -6,7 +11,7 @@
             Transformando espacios desde 1972
         </h3>
     </div>
-    <div class="bg-nosotrosLeft relative">
+    <div class="bg-nosotrosLeft relative" id="seccion-nosotros">
         <div id="blur" class="w-full h-full backdrop-blur-[1px] flex flex-col py-5 bg-firstColor/60 text-white">
             <header class="pb-5">
                 <h1 class="text-6xl leading-none font-thin text-center">Nosotros</h1>
@@ -27,17 +32,16 @@
             </h3>
 
             <div class="flex flex-col gap-3 [&>a>h3]:h-[40px] [&>a>h3]:flex [&>a>h3]:items-center">
-                <a href="" class="flex items-center justify-center w-full px-5">
-                    <h3 class="font-semibold rounded-l bg-white text-firstColor text-center w-[150px] justify-center">CABA</h3>
-                    <h3 class="px-2 bg-firstColor w-full rounded-r shadow-leftShadow pl-5 font-extralight">+54 11 4321 6789</h3>
-                </a>
-                <a href="" class="flex items-center w-full px-5">
+                <a href="https://api.whatsapp.com/send?phone=543329521104&text=Hola%2C%20gracias%20por%20comunicarte%20con%20Mosteiro%20Amoblamiento.%20Déjanos%20tu%20consulta%20y%20a%20la%20brevedad%20te%20responderemos.%0AGracias." class="flex items-center w-full px-5" target="_blank">
                     <h3 class="font-semibold rounded-l bg-white text-firstColor w-[150px] justify-center">San Pedro</h3>
-                    <h3 class="bg-firstColor rounded-r shadow-leftShadow w-full pl-5 font-extralight">+54 3329 678912</h3>
+                    <h3 class="bg-firstColor rounded-r shadow-leftShadow w-full pl-5 font-extralight flex gap-2">
+                        <WhatsApp/>+54 3329 52-1104
+                    </h3>
                 </a>
-                <a href="" class="flex items-center justify-center w-full px-5">
+                <a href="https://www.instagram.com/mosteiro.amoblamientos/" target="_blank" class="flex items-center justify-center w-full px-5">
                     <h3 class="font-semibold rounded-l bg-white text-firstColor w-[150px] justify-center">Instagram</h3>
-                    <h3 class="bg-firstColor rounded-r shadow-leftShadow w-full pl-5 font-extralight">Mosteiro.amoblamientos</h3>
+                    <h3 class="bg-firstColor rounded-r shadow-leftShadow w-full pl-5 font-extralight flex gap-2">
+                    <Instagram/>Mosteiro.amoblamientos</h3>
                 </a>
 
                 <footer class="flex flex-col px-5">

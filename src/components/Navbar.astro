@@ -1,27 +1,75 @@
 ---
 import Logo from "./Logo.astro";
 import MenuIcon from "./MenuIcon.astro";
+import CerrarBtn from "./CerrarBtn.astro";
 ---
-
-<nav class="flex w-[100%] justify-between items-center absolute z-50 px-5 py-5 lg:px-10 lg:py-10">
+<nav class="flex w-[100%] justify-between items-center fixed z-50 px-5 py-5 lg:px-10 lg:py-10">
     <Logo ancho={80} alto={40}/>
     <MenuIcon/>
+    <div class="w-screen h-screen absolute top-0 left-0 hidden" id="navbar-bg">
+        <div class="w-[50%] bg-black/50 hidden" id="cerrar-navbar"></div>
+        <ul class="w-[50%] bg-firstColor hidden text-white pt-20 px-5 flex flex-col gap-3" id="navbar">
+            <CerrarBtn/>
+            <li class="">
+                <a href="/" class="font-medium">Inicio</a>
+            </li>
+            <li class="">
+                <a href="/" class="font-extralight">Livings</a>
+            </li>
+            <li class="">
+                <a href="/" class="font-extralight">Cocinas</a>
+            </li>
+            <li class="">
+                <a href="/" class="font-extralight">Dormitorios</a>
+            </li>
+            <li class="">
+                <a href="/" class="font-extralight">Baños</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 
 <script>
+
+    const navbar = document.querySelector('#navbar');
     const menu_icon = document.querySelector('#menu_icon');
+    const cerrar_navbar = document.querySelector('#cerrar-navbar');
+    const cerrar_navbar_btn = document.querySelector("#cerrar-navbar-btn");
+    const navbar_bg = document.querySelector("#navbar-bg");
+
+    cerrar_navbar.addEventListener('click', () => {
+      cerrar_navbar.classList.add('hidden');
+
+      navbar.classList.add('hidden');
+
+      menu_icon.classList.remove('hidden')
+      menu_icon.classList.add('flex');
+
+      navbar_bg.classList.remove('flex');
+      navbar_bg.classList.add('hidden');
+    })
+
+    cerrar_navbar_btn.addEventListener('click', () => {
+      cerrar_navbar.classList.add('hidden');
+
+      navbar.classList.add('hidden');
+
+      menu_icon.classList.remove('hidden')
+      menu_icon.classList.add('flex');
+
+      navbar_bg.classList.remove('flex');
+      navbar_bg.classList.add('hidden');
+    })
+
+
     menu_icon.addEventListener('click', () => {
         menu_icon.classList.remove('flex');
         menu_icon.classList.add('hidden');
+
+        navbar_bg.classList.remove('hidden');
+        navbar_bg.classList.add('flex');
+
+        cerrar_navbar.classList.toggle('hidden');
+        navbar.classList.toggle('hidden');
     })
-
-    const nav = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-        if(window.scrollY > 500){
-            nav.classList.add('bg-secondColor')
-        } else {
-            nav.classList.remove('bg-secondColor');
-        }
-    });
-
 </script>
